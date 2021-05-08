@@ -5,11 +5,11 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
+import java.util.List;
+
 public class TaskPage {
 
-    public TaskPage(){
-        PageFactory.initElements(Driver.get(), this);
-    }
+    public TaskPage(){PageFactory.initElements(Driver.get(), this);}
 
     @FindBy (xpath="//a[@class='c24-cookie-consent-button']")
     public WebElement akzeptieren;
@@ -17,13 +17,13 @@ public class TaskPage {
     @FindBy(xpath = "//*[@id=\"200007\"]//a")
     public WebElement barclayCardVisa;
 
-    @FindBy(id = "cl_login")
+    @FindBy(xpath = "//input[@id=\"cl_login\"]")
     public WebElement emailInput;
 
-    @FindBy(id = "c24-uli-login-btn")
+    @FindBy(xpath = "//*[@id=\"c24-uli-login-btn\"]")
     public WebElement formWeiter;
 
-    @FindBy(xpath = "//*[@xpath=\"1\"]")
+    @FindBy(xpath = "//*[@class=\"c24-uli-cl-box c24-uli-cl-r-anonym style-scope unified-login\"]")
     public WebElement gastFortfahren;
 
     @FindBy(xpath = "//*[@class=\"sc-bBXqnf cqnVzA\"]")
@@ -61,6 +61,9 @@ public class TaskPage {
 
     @FindBy(id = "PHONENUMBER_MOBILE")
     public WebElement phoneNumberInput;
+
+    @FindBy(xpath = "//label[@class=\"styles__Message-sc-10pthkh-2 ibnmqN\"]")
+    public List<WebElement> errorMessages;
 
 
 

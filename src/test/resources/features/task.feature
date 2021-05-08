@@ -23,6 +23,6 @@ Feature: Selenium Task
       | Wohnsituation       | Eigenheim      |
       | Mobilnummer         | 01754927822    |
 
-    And the user should click on weiter button
+    And the user clicks on weiter button
     Then the user should see the next form page without any error message
 
